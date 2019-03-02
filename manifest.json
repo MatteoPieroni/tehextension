@@ -1,0 +1,26 @@
+{
+    "manifest_version": 2,
+    "name": "TEhExtension",
+    "description": "Tired of always having to correct teh in the? This is the extension for you!",
+    "version": "1.0.0",
+    "author": "Matteo Pieroni",
+    "browser_action": {
+        "default_title": "Teh Extension"
+    },
+    "content_scripts": [{
+        "matches": ["http://*/*", "https://*/*"],
+        "js": ["contentScript.js"],
+        "run_at": "document_start"
+    }],
+    "permissions": [
+        "tabs",
+        "http://*/*",
+        "https://*/*"
+    ],
+    "icons": {
+      "16": "assets/tab-icon16.png",
+      "32": "assets/tab-icon32.png",
+      "48": "assets/tab-icon48.png",
+      "128": "assets/tab-icon128.png"
+    }
+}
